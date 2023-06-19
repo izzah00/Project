@@ -101,11 +101,10 @@
     <ul class="navbar">
         <br><br><li><a href="/">Home</a></li><br>
         <li><a href="acc">Account Profile</a></li><br>
-        <li><a href="discuss">Discussion board</a></li><br>
+        <li><a href="DashboardUser.php">Dashboard</a></li><br>
         <li><a class="active" href="complaint">Complaint</a></li><br>
-        <li><a href="http://localhost/webs/webs/try3.php">Total post</a></li><br>
         <li><a href="http://localhost/webs/webs/try4.php">Report</a></li><br>
-        <li><a href="logout">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
     </ul>  
     </div>  
        
