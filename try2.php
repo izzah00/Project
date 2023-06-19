@@ -90,9 +90,8 @@
 
     <div class=sidebar>
     <ul class="navbar">
-        <br><br><li><a href="/">Home</a></li><br>
+        <br><br><li><a href="DashboardUser.php">Home</a></li><br>
         <li><a href="acc">Account Profile</a></li><br>
-        <li><a href="DashboardUser.php">Dashboard</a></li><br>
         <li><a class="active" href="complaint">Complaint</a></li><br>
         <li><a href="try4.php">Report</a></li><br>
         <li><a href="logout.php">Logout</a></li>
