@@ -3,7 +3,7 @@
 $conn = mysqli_connect ("localhost","root","") or die (mysqli_connect_error()) ;
 
 //to select the targeted database 
-mysqli_select_db ($conn,"login") or die (mysqli_error($conn)) ;
+mysqli_select_db ($conn,"mini_project") or die (mysqli_error($conn)) ;
 
     if(isset($_POST['update']))
     {
