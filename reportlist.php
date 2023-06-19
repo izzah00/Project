@@ -212,8 +212,7 @@ input[type=submit]:hover {
                         <td><?php echo $rCID; ?></td>
                         <td><?php echo $rContent; ?></td>
                         <td><?php echo $rStatus; ?></td>
-                        <td><a href="updatereport.php?id=<?php echo $rID; ?>  "><div class="w3-padding w3-xlarge w3-text-green">
-    <i class="fa fa-edit"></i></div></a></td>
+                        <td><a href="updatereport.php?id=<?php echo $rID; ?>  "><div class="w3-padding w3-xlarge w3-text-green"><i class="fa fa-edit"></i></div></a></td>
                       </tr>
                     </table><br>
                     <?php
