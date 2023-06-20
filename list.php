@@ -105,9 +105,8 @@
 
 <div class=sidebar>
 <ul class="navbar">
-    <br><br><li><a href="/">Home</a></li><br>
+    <br><br><li><a href="DashboardUser.php">Home</a></li><br>
     <li><a href="acc">Account Profile</a></li><br>
-    <li><a href="discuss">Discussion board</a></li><br>
     <li><a class="active" href="complaint">Complaint</a></li><br>
     <li><a href="report">Report</a></li><br>
     <li><a href="logout">Logout</a></li>
