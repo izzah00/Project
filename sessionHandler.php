@@ -61,7 +61,7 @@ if (isset ($result)) {
                 header ("location: Experthomepage.php");
             }
             else{
-                header ("location: DashboardUser.php");
+                header ("location: homepage.php");
             }
         exit(); 
     }
