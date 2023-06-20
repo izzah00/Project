@@ -1,3 +1,33 @@
+<?php
+$con = mysqli_connect("localhost","root","","mini_project");
+if(!$con){
+    echo "Problem in database connection...";
+}else{
+
+// SELECT discussion.id, discussion.likes FROM discussion INNER JOIN discussion_answer ON discussion.answer.id
+// SELECT * FROM discussion
+
+    $sql = "SELECT discussion.id, discussion.likes FROM discussion INNER JOIN discussion_answer ON discussion.answer_id";
+    $result = mysqli_query($con,$sql);
+    $chart_data = "";
+    while($row = mysqli_fetch_array($result)){
+        $dID[] = $row['discussion.id'];
+        $dLike[] = $row['discussion.likes'];
+        $daID[] = $row['discussion.answer_id'];
+
+         
+        // for(i=0;i<id.length;i++){}
+        // $query = "SELECT COUNT(id) FROM discussion";
+        // $result = mysqli_query($con,$query);
+        // $chart_data = "";
+        // while($row = mysqli_fetch_array($result)){
+        //     $dID[] = "SELECT COUNT(id)";
+        //     // $dLike[] = $row['likes'];
+    
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,21 +126,10 @@ footer {
         <section>
         <nav>
                 <ul class="navbar">
-                    <li><a href="menu2">Home</a></li>
-                    <li><a href="/">Manage User Profile</a></li>
                     <li><a href="http://localhost/BCS2243/mini_project/usersystemrating.php">System Rating</a></li>
                     <li><a href="http://localhost/BCS2243/mini_project/reportlist.php">Report List</a></li>
                     <li><a href="http://localhost/BCS2243/mini_project/usersatisfaction.php">User Satisfaction</a></li>
                     <li><a href="http://localhost/BCS2243/mini_project/useractivity.php">User Activity</a></li>
-
-                        <ul>
-                            <li><a href="/">Profil</a></li>
-                            <li><a href="menu1">menu1</a></li>
-                            <li><a href="menu2">menu2</a></li>
-                            <li><a href="testdropdown">Profil</a></li>
-                        </ul>
-                        <li><a href="testdropdown">Profil</a>
-                    </li>
                     <li><a href="menu1">Logout</a></li>
                 </ul>
             </nav>
@@ -123,7 +142,7 @@ footer {
                     <canvas id="myChart1" style="width:100% width 100%; align-content:center;"></canvas>
                         <script>
                             var xValues = ["Posts", "Comments", "Likes"];
-                            var yValues = [85, 145, 222];
+                            var yValues = [<?php echo json_encode($dLike);?>, 0, 0];
                             var barColors = [
                             "#F6C6EA","#F7D59C","#FF7878"];
 
@@ -146,25 +165,10 @@ footer {
                         </script>
                 </div> 
 
-                <h1>London</h1>
+                <h1>London</h1><?php echo json_encode($dLike);?><?php echo json_encode($dID);?><?php echo json_encode($daID);?>
                 <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
                 <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-                <h1>London</h1>
-                <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-                <h1>London</h1>
-                <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-                <h1>London</h1>
-                <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-                <h1>London</h1>
-                <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-                <h1>London</h1>
-                <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-                <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-
+                
             </article>
         </section>
 
