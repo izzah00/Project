@@ -166,7 +166,7 @@ table, th, td {
 
 
 <header>
-<img src="/banner.png" style= "width:100%; height: 10%"  >
+<img src="assets/banner.png" style= "width:100%; height: 10%"  >
 </header>
 <br>
 <section>

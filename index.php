@@ -13,7 +13,7 @@
 
 
 <div class="header">
-        <img src="gambar/banner.png" style="height: 150px; width:1325px;">
+        <img src="assets/banner.png" style="height: 150px; width:1325px;">
       </div>
   </div>
 
